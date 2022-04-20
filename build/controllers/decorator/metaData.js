@@ -5,4 +5,5 @@ var metadata;
 (function (metadata) {
     metadata["path"] = "path";
     metadata["mehtod"] = "method";
+    metadata["middleware"] = "middleware";
 })(metadata = exports.metadata || (exports.metadata = {}));
