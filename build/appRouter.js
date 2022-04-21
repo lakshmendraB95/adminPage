@@ -3,17 +3,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Approuter = void 0;
+exports.AppRouter = void 0;
 var express_1 = __importDefault(require("express"));
-var Approuter = /** @class */ (function () {
-    function Approuter() {
+var AppRouter = /** @class */ (function () {
+    function AppRouter() {
     }
-    Approuter.getInstance = function () {
-        if (!this.instance) {
-            this.instance = express_1.default.Router();
+    AppRouter.getInstance = function () {
+        if (!AppRouter.instance) {
+            AppRouter.instance = express_1.default.Router();
         }
-        return this.instance;
+        return AppRouter.instance;
     };
-    return Approuter;
+    return AppRouter;
 }());
-exports.Approuter = Approuter;
+exports.AppRouter = AppRouter;

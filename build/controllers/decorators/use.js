@@ -11,11 +11,11 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.use = void 0;
 require("reflect-metadata");
-var metaData_1 = require("./metaData");
+var MetadataKeys_1 = require("./MetadataKeys");
 function use(middleware) {
     return function (target, key, desc) {
-        var middlewares = Reflect.getMetadata(metaData_1.metadata.middleware, target, key) || [];
-        Reflect.defineMetadata(metaData_1.metadata.middleware, __spreadArray(__spreadArray([], middlewares, true), [middleware], false), target, key);
+        var middlewares = Reflect.getMetadata(MetadataKeys_1.MetadataKeys.middleware, target, key) || [];
+        Reflect.defineMetadata(MetadataKeys_1.MetadataKeys.middleware, __spreadArray(__spreadArray([], middlewares, true), [middleware], false), target, key);
     };
 }
 exports.use = use;
